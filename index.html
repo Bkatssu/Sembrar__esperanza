@@ -123,6 +123,8 @@ footer strong{color:var(--gold);}
 .bancos-grid img{width:100%;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.15);}
 .modal-bancos-caja .modal-acciones{justify-content:center;margin-top:1.4rem;}
 
+.nav-brand{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--wine);letter-spacing:.04em;line-height:1.1;}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;}
@@ -155,6 +157,7 @@ footer strong{color:var(--gold);}
 <!-- NAV -->
 <nav id="navbar">
   <img class="nav-logo" id="nav-logo" alt="Logo"/>
+  <span class="nav-brand">Hogar Juan Pablo II</span>
   <div class="nav-links">
     <button onclick="irA('inicio')" id="btn-inicio">Inicio</button>
     <button onclick="irA('acerca')" id="btn-acerca">Acerca de</button>
@@ -279,7 +282,6 @@ window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('img-bi').src       = pfx + BI;
   document.getElementById('img-banrural').src = pfx + BANRURAL;
   construirDonaciones();
-  restaurarGuardados();
 });
 
 // Navegación
@@ -340,7 +342,7 @@ function construirDonaciones() {
         if (cb.checked) { seleccionados.add(key); fila.classList.add('marcado'); }
         else            { seleccionados.delete(key); fila.classList.remove('marcado'); }
         document.getElementById('cont-sel').textContent = seleccionados.size;
-        try { localStorage.setItem('don_sel', JSON.stringify(Array.from(seleccionados))); } catch(e2){}
+        
       });
       body.appendChild(fila);
     });
@@ -349,21 +351,7 @@ function construirDonaciones() {
   });
 }
 
-function restaurarGuardados() {
-  try {
-    var saved = JSON.parse(localStorage.getItem('don_sel') || '[]');
-    if (!saved.length) return;
-    document.querySelectorAll('.item-fila').forEach(function(fila) {
-      if (saved.indexOf(fila.dataset.key) !== -1) {
-        var cb = fila.querySelector('input[type=checkbox]');
-        cb.checked = true;
-        fila.classList.add('marcado');
-        seleccionados.add(fila.dataset.key);
-      }
-    });
-    document.getElementById('cont-sel').textContent = seleccionados.size;
-  } catch(e){}
-}
+
 
 function verLista() {
   var ul = document.getElementById('lista-modal');
