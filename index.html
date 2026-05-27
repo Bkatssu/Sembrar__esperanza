@@ -203,15 +203,37 @@ footer strong{color:var(--gold);}
           <p class="texto-p">Nuestra red de voluntarios crece cada día gracias a personas como tú, que eligen dar parte de su tiempo y recursos para que otros tengan una vida mejor. Cada donativo, por pequeño que sea, es una semilla de esperanza.</p>
           <button class="btn-primario" style="margin-top:.4rem" onclick="irA('donaciones')">Ver lista de donaciones</button>
         </div>
+        <div class="info-card" style="margin-top:1.8rem;">
+          <h4>🤝 Información para voluntariados en el Asilo</h4>
+          <p>Si cuentan con un voluntariado por parte de la universidad UNIS, pueden ponerse en contacto a los números:</p>
+          <p>📞 4255-2027<br />📞 5823-6776</p>
+          <p>
+            Asimismo, si desean realizar voluntariado por parte de algún colegio, universidad o de manera personal,
+            pueden escribir a los mismos números para solicitar una fecha y coordinar el horario disponible.
+          </p>
+          <p>⏰ Contamos con dos horarios al día:</p>
+          <ul>
+            <li>10:00 a.m. a 12:00 p.m.</li>
+            <li>2:00 p.m. a 4:00 p.m.</li>
+          </ul>
+          <p>Solicitamos de favor presentar una hoja con:</p>
+          <ul>
+            <li>✔️ Nombre de los integrantes del grupo</li>
+            <li>✔️ Actividades que se estarán realizando</li>
+          </ul>
+          <p>Esto con el fin de llevar un control y archivo interno de los voluntariados.</p>
+          <p>¡Será un gusto contar con su apoyo!</p>
+        </div
         <div class="cards-col">
           <div class="info-card"><h4>🎯 Misión</h4><p>Brindar atención integral, cuidado, alimentación, acompañamiento y un ambiente digno y seguro a los adultos mayores en situación vulnerable.</p></div>
           <div class="info-card"><h4>🌟 Visión</h4><p>Ser un hogar reconocido por ofrecer bienestar, amor, respeto y calidad de vida a los adultos mayores, promoviendo una vejez digna y humana.</p></div>
           <div class="info-card"><h4>💛 Valores</h4><p>Fe · Solidaridad · Dignidad · Transparencia · Amor al prójimo · Trabajo en equipo · Esperanza.</p></div>
           <div class="info-card"><h4>❤️ Una visita que llena el corazón</h4><p>Cada visita, sonrisa y momento compartido hace una gran diferencia❤️‍🩹. Si deseas ser voluntario o convivir con nuestros abuelitos, contáctanos y sé parte de esta hermosa familia.</p></div>
           <div class="info-card"><h4>🏠 Dirección</h4><p><strong>Hogar Juan Pablo II</strong><br/>12 Calle A 3-25, Zona 1<br/>Ciudad de Guatemala, Guatemala</p></div>
-          <div class="info-card"><h4>📞 Contáctanos</h4><p>WhatsApp / Llamadas:<br/><strong>4255-2027 &nbsp;|&nbsp; 5823-6776</strong></p></div>
+          <div class="info-card"><h4>📞 Contáctanos</h4><p>WhatsApp / Llamadas:<br/><strong>4255-2027 &nbsp;|&nbsp; 5823-6776</strong></h4><p>Instagram<br/><button style="background: none; border: none; padding:0;"><a href="https://www.instagram.com/hogar_juanpabloii?igsh=bDZmdmM0ZHNhbXQz&utm_source=qr"><img src="https://img.magnific.com/vector-premium/icono-logotipo-vector-instagram-logotipo-redes-sociales_901408-392.jpg?semt=ais_hybrid&w=740&q=80" width="40" style="border: 3px solid white;"></a></button><strong></p></div>
         </div>
       </div>
+      
       <div class="cita">
         <p>"La misericordia de Dios no tiene límites para quien se vuelve a Él con corazón arrepentido y sincero."</p>
         <span>— San Juan Pablo II</span>
@@ -235,8 +257,9 @@ footer strong{color:var(--gold);}
       </div>
       <div class="grid-cat" id="grid-don"></div>
     </div>
+    
     <footer>
-      <p><strong>Gracias por Sembrar Esperanza</strong><br/>Una organización comprometida con la dignidad y el bienestar de Guatemala.<br/>Hecho con ❤️ y fe.</p>
+      <p><strong>Gracias por Sembrar Esperanza</strong><br/>Una organización comprometida con la dignidad y el bienestar de Guatemala.<br/>Hecho con ❤️ y fe.<br/>Toda ayuda suma y será de gran beneficio para nuestros adultos mayores 🤍</p>
     </footer>
   </div>
 
@@ -310,8 +333,21 @@ var categorias = [
   { ic:'🧽', titulo:'Limpieza',
     items:['Cloro','Desinfectante','Detergente para ropa','Jabón en barra para ropa','Suavizante','Esponjas','Trapeadores (palos y repuestos)','Escobas','Recogedores','Guantes de limpieza','Bolsas para basura','Vinagre'] },
   { ic:'🧴', titulo:'Higiene Personal',
-    items:['Jabón de baño (barra o líquido)','Champú y acondicionador','Crema humectante corporal','Desodorante (barra o roll-on)','Pasta dental','Cepillos de dientes','Hilo dental','Enjuague bucal','Pañales para adulto (tallas M, L, XL)','Toallitas húmedas','Papel higiénico','Pañuelos desechables','Toallas sanitarias','Rastrillos de afeitar','Crema de afeitar','Algodón y gasas','Alcohol en gel','Repelente de insectos','Protector solar','Peine o cepillo para cabello'] }
+    items:['Jabón de baño (barra o líquido)','Champú y acondicionador','Crema humectante corporal','Desodorante (barra o roll-on)','Pasta dental','Cepillos de dientes','Hilo dental','Enjuague bucal','Pañales para adulto (tallas M, L, XL)','Toallitas húmedas','Papel higiénico','Pañuelos desechables','Toallas sanitarias','Rastrillos de afeitar','Crema de afeitar','Algodón y gasas','Alcohol en gel','Repelente de insectos','Protector solar','Peine o cepillo para cabello'] },
+  { ic:'⚕️', titulo:'Medicamentos',
+    items:['Fenofibrato 250 mg','Rosuvastatina 20 mg','Carbamazepina 400 mg','Fenitoína 100 mg','Melatonina 5 mg','Nimodipina','Omeprazol','Lansoprazol','Simeticona','Clonazepam','Acetaminofén','Loratadina',] },
+  { ic:'📌 ', titulo:'Medicamentos para la presión arterial',
+    items:['Losartán','Amlodipino','Enalapril',] },
+   { ic:'📌 ', titulo:'Medicamentos para diabetes/azúcar',
+    items:['Metformina','Glibenclamida','EInsulina',] },
+  { ic:'📌 ', titulo:'Medicamentos para evacuación/estreñimiento',
+    items:['Lactulosa','Leche de Magnesia Phillips','Anara','Ciruelax'] },
+  { ic:'📌 ', titulo:'Material para curaciones',
+    items:['Apositos Aluderm','Neovol','Iruxol','Membranas de miel'] },
+  { ic:'📌 ', titulo:'Insumos médicos',
+    items:['Gasas','Micropore','Guantes de látex'] },
 ];
+
 
 var seleccionados = new Set();
 
